@@ -1,8 +1,8 @@
 .testimonials {
   padding: 100px 0;
-  background-color: var(--color-black);
   color: var(--color-white);
   position: relative;
+
 
   &__background-square {
     position: absolute;
@@ -52,6 +52,13 @@
     position: relative;
     z-index: 1;
     align-items: flex-start; // Важно для ступенчатого эффекта
+  }
+
+  &__circle{
+    bottom: -10px;
+    left: -50px;
+    width: 450px;
+    height: 450px;
   }
 }
 

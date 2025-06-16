@@ -1,6 +1,6 @@
 .application{
     width: 100%;
-    background-color: var(--color-site);
+    background-color: var(--color-black);
     color: var(--color-white);
     font-family: var(--font-family);
     font-weight: 400;
@@ -13,7 +13,4 @@
     padding: 0 var(--container-padding);
     margin: 0 auto;
     width: 100%;
-    @include md{
-        background-color: red;
-    }
 }
