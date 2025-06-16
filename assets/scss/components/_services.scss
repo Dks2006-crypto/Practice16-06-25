@@ -1,0 +1,147 @@
+// _services.scss
+.services {
+  padding: 100px 0;
+  background-color: var(--color-black);
+  color: var(--color-white);
+
+  &__header {
+    max-width: 800px;
+    margin: 0 auto 60px;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  &__subtitle {
+    font-size: 24px;
+    margin-bottom: 20px;
+    opacity: 0.8;
+  }
+
+  &__description {
+    font-size: 18px;
+    line-height: 1.6;
+    opacity: 0.7;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: calc(33.333% - 1px);
+      width: 1px;
+      height: 100%;
+      background: rgb(255, 255, 255);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: calc(66.666% - 1px);
+      width: 1px;
+      height: 100%;
+      background: rgb(255, 255, 255);
+    }
+  }
+}
+
+.service-card {
+  padding-inline: 40px;
+  padding-block: 0px;
+  position: relative;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__number {
+    font-size: 48px;
+    font-weight: 700;
+    color: #6313C9;
+    line-height: 1;
+    min-width: 40px;
+  }
+
+  &__text {
+    flex: 1;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+
+  &__description {
+    font-size: 16px;
+    line-height: 1.6;
+    opacity: 0.8;
+  }
+
+  @include lg {
+    padding: 30px;
+    
+    &__content {
+      gap: 20px;
+    }
+    
+    &__number {
+      font-size: 36px;
+    }
+    
+    &__title {
+      font-size: 20px;
+    }
+  }
+
+  @include md {
+    padding: 25px 20px;
+    
+    &__content {
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    &__number {
+      font-size: 32px;
+    }
+  }
+}
+
+@include sm {
+  .services {
+    padding: 60px 0;
+    
+    &__grid {
+      grid-template-columns: 1fr;
+      
+      &::before, &::after {
+        display: none;
+      }
+    }
+  }
+  
+  .service-card {
+    padding: 30px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}

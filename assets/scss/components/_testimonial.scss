@@ -1,0 +1,210 @@
+.testimonials {
+  padding: 100px 0;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  position: relative;
+
+  &__background-square {
+    position: absolute;
+    top: 0px;
+    left: -150px;
+    width: 680px;
+    height: 950px;
+    background: linear-gradient(135deg, rgba(40, 40, 49, 1) 0%, rgba(14, 12, 18, 0.05) 100%);
+    transform: rotate(7deg);
+    z-index: 0;
+    border-radius: 30px;
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  &__subtitle {
+    font-size: 20px;
+    opacity: 0.8;
+    margin-bottom: 30px;
+  }
+
+  &__divider {
+    width: 100px;
+    height: 2px;
+    background-color: var(--color-white);
+    margin: 0 auto;
+    opacity: 0.2;
+  }
+
+  &__slider {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    align-items: flex-start; // Важно для ступенчатого эффекта
+  }
+}
+
+.testimonial-card {
+  background: linear-gradient(to bottom,
+          rgba(60, 63, 74, 0) 0%,
+          rgba(60, 63, 74, 0.8) 100%);
+  border-radius: 12px;
+  padding: 30px;
+  padding-top: 100px;
+  transition: all 0.3s ease; // Добавляем transition для всех свойств
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 0;
+
+  // Ступенчатый эффект
+  &:nth-child(1) {
+    margin-top: 0;
+  }
+  &:nth-child(2) {
+    margin-top: 80px;
+  }
+  &:nth-child(3) {
+    margin-top: 160px;
+  }
+
+  // Эффект при наведении
+  &:hover {
+    transform: translateY(-10px);
+    border-color: var(--color-white); // Белый бордер при наведении
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1); // Добавляем тень
+  }
+
+  &__photo {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    width: 160px;
+    height: 160px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+  }
+
+  &:hover &__photo {
+    border-color: var(--color-white); // Белая рамка фото при наведении
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__rating {
+    color: #6313C9;
+    font-size: 28px;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    opacity: 0.9;
+  }
+
+  &__author {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  @include md {
+    padding: 25px;
+    padding-top: 80px;
+
+    // Адаптация ступенчатого эффекта
+    &:nth-child(2) {
+      margin-top: 60px;
+    }
+    &:nth-child(3) {
+      margin-top: 120px;
+    }
+
+    &__photo {
+      width: 120px;
+      height: 120px;
+      top: -50px;
+    }
+
+    &__rating {
+      font-size: 24px;
+    }
+
+    &__text {
+      font-size: 15px;
+    }
+
+    &__author {
+      font-size: 16px;
+    }
+  }
+
+  @include sm {
+    // На мобильных убираем ступенчатый эффект
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3) {
+      margin-top: 40px;
+    }
+
+    padding: 20px;
+    padding-top: 70px;
+
+    &__photo {
+      width: 100px;
+      height: 100px;
+      top: -40px;
+    }
+  }
+}
+
+@include sm {
+  .testimonials {
+    padding: 60px 0;
+
+    &__background-square {
+      width: 300px;
+      height: 300px;
+      top: 0px;
+      left: -80px;
+    }
+
+    &__title {
+      font-size: 36px;
+    }
+
+    &__subtitle {
+      font-size: 18px;
+    }
+
+    &__slider {
+      grid-template-columns: 1fr;
+      gap: 60px;
+    }
+  }
+}

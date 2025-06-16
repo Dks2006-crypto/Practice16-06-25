@@ -1,0 +1,73 @@
+h1, .hero__title {
+    font-size: 72px;
+    font-weight: 700;
+    margin: 0 0 32px 0;
+    
+    @include lg {
+        font-size: 60px;
+    }
+    
+    @include md {
+        font-size: 48px;
+    }
+    
+    @include sm {
+        font-size: 36px;
+    }
+}
+
+h2 {
+  font-family: var(--font-primary);
+  font-size: var(--h2-font-size);
+  font-weight: var(--h2-font-weight);
+  line-height: var(--h2-line-height);
+  letter-spacing: var(--h2-letter-spacing);
+  margin: 0 0 24px 0;
+}
+
+h3 {
+    font-size: 36px;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+}
+
+h4 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 16px 0;
+}
+
+h5 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 12px 0;
+}
+
+h6 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0 0 16px 0;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-size: var(--text-font-size);
+  font-weight: var(--text-font-weight);
+  line-height: var(--text-line-height);
+  letter-spacing: var(--text-letter-spacing);
+}
+
+p {
+  font-family: var(--font-primary);
+  font-size: var(--text-font-size);
+  font-weight: var(--text-font-weight);
+  line-height: var(--text-line-height);
+  letter-spacing: var(--text-letter-spacing);
+  margin: 0 0 16px 0;
+}

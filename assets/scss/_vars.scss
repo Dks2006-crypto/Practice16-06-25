@@ -1,0 +1,25 @@
+// создаем переменные для scss
+$black: #000;
+$white: #fff;
+// создаем переменные для css
+:root{
+    --color-white: #{$white};
+    --color-black: #{$black};
+    --color-site: #15181D;
+    --content-width: 1440px;
+    --container-padding: 150px;
+    --container-width: calc(var(--content-width) + (var(--container-padding) * 2));
+    --font-size: 16px;
+    --font-family: 'SF UI', sans-serif;
+
+    --font-primary: 'Inter', sans-serif;
+    --h2-font-size: 64px;
+    --h2-font-weight: 600; /* Semi Bold */
+    --h2-line-height: auto;
+    --h2-letter-spacing: 0%;
+    
+    --text-font-size: 16px;
+    --text-font-weight: 400; /* Regular */
+    --text-line-height: 150%;
+    --text-letter-spacing: 0%;
+}
