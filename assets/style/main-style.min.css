@@ -908,4 +908,50 @@ p {
 
 .photo-card {
   height: 100%;
+}
+
+.footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 20px 0;
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+.footer__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.footer__links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.footer__link {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+.footer__link:hover {
+  color: var(--color-white);
+}
+.footer__social {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+.footer__social-link-icon {
+  width: 30px;
+  height: 30px;
+}
+.footer__copyright {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
 }/*# sourceMappingURL=main-style.min.css.map */
