@@ -43,7 +43,7 @@
     opacity: 0.2;
   }
 
-  &__slider {
+  &__cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
@@ -209,7 +209,7 @@
       font-size: 18px;
     }
 
-    &__slider {
+    &__cards {
       grid-template-columns: 1fr;
       gap: 60px;
     }
