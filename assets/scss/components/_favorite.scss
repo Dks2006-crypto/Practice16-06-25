@@ -26,20 +26,20 @@
         font-size: 20px;
         line-height: 1.6;
         opacity: 0.8;
-        margin-bottom: 40px;
     }
 }
 
 .slider-controls {
     display: flex;
     gap: 15px;
+
 }
 
 .slider-button {
     width: 50px;
     height: 50px;
-    border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    border: 3px solid white;
     background: transparent;
     color: var(--color-white);
     cursor: pointer;
@@ -59,17 +59,25 @@
     }
 }
 
-.favorite-photos-slider {
-    width: 100%;
-    padding: 10px 0 30px;
+.favorite{
+        &-photos-slider {
+        width: 100%;
+        padding: 10px 0 30px;
 
-    .swiper-slide {
-        width: auto;
-        transition: transform 0.3s ease;
+        .swiper-slide {
+            width: auto;
+            transition: transform 0.3s ease;
 
-        &:hover {
-            transform: translateY(-10px);
+            &:hover {
+                transform: translateY(-10px);
+            }
         }
+    }
+    &__wrapper{
+        display: flex;
+        align-items: end;
+        gap: 25px;
+        justify-content: center;
     }
 }
 

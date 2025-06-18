@@ -732,7 +732,6 @@ p {
   font-size: 20px;
   line-height: 1.6;
   opacity: 0.8;
-  margin-bottom: 40px;
 }
 
 .slider-controls {
@@ -743,8 +742,8 @@ p {
 .slider-button {
   width: 50px;
   height: 50px;
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  border: 3px solid white;
   background: transparent;
   color: var(--color-white);
   cursor: pointer;
@@ -772,6 +771,12 @@ p {
 }
 .favorite-photos-slider .swiper-slide:hover {
   transform: translateY(-10px);
+}
+.favorite__wrapper {
+  display: flex;
+  align-items: end;
+  gap: 25px;
+  justify-content: center;
 }
 
 .photo-card {
