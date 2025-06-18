@@ -1,51 +1,67 @@
-// header style
 .header {
-    padding: 30px 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    
-    &__container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        
+  padding: 30px 0;
+  position: absolute;
+  top: 0;
+  padding-bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include md {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 187px;
+    justify-content: center;
+    padding-bottom: 8px;
+    padding-inline: 10px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    &:hover {
+      border-bottom-color: var(--color-white);
     }
 
-    &__logo {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        justify-content: center;
-        padding-bottom: 8px;
-        padding-inline: 10px;
-        border-bottom: 2px solid transparent;
-        transition: border-color 0.3s ease;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-        
-        &:hover {
-            border-bottom-color: var(--color-white); // Подчеркивание при наведении
-        }
-        
-        @include md {
-            padding-bottom: 6px;
-            border-bottom-width: 1.5px;
-        }
+    @include md {
+      padding-bottom: 6px;
+      border-bottom-width: 1.5px;
     }
+
+    @include sm {
+      flex-direction: column;
+      padding-inline: 5px;
+      gap: 6px;
+    }
+  }
 }
 
 .logo {
-    color: var(--color-white);
-    font-size: 24px;
-    font-weight: 700;
-    text-decoration: none;
-    letter-spacing: 1px;
-    position: relative; // Для дополнительной гибкости
-    
-    @include md {
-        font-size: 20px;
-    }
+  color: var(--color-white);
+  font-size: 24px;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 1px;
+  position: relative;
+
+  @include md {
+    font-size: 20px;
+  }
+
+  @include sm {
+    font-size: 18px;
+    text-align: center;
+  }
 }

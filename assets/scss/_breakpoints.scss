@@ -3,6 +3,7 @@ $md: 576px;
 $lg: 768px;
 $xl: 820px;
 $xxl: 990px;
+$xxxl: 1100px;
 @mixin sm {
     @media (max-width: #{$sm}) {
         @content;
@@ -26,6 +27,11 @@ $xxl: 990px;
  }
  @mixin xxl {
     @media (max-width: #{$xxl}) {
+        @content;
+    }
+ }
+  @mixin xxxl {
+    @media (max-width: #{$xxxl}) {
         @content;
     }
  }
